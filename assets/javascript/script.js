@@ -68,5 +68,5 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
         console.log("train has already been by");
         console.log(nextArrival);
     }
-    $("#train-display").append("<tr><td>" + trainName + "</td><td>" + trainDestination + "</td><td>" + trainFreq + "</td><td>" + nextArrival + "</td><td>" + minutesAway + "</td></tr>");
+    $("#train-display").append("<tr><td>" + trainName + "</td><td>" + trainDestination + "</td><td>" + trainFreq + "</td><td>" + moment(nextArrival, "HH:mm").format("hh:mm A") + "</td><td>" + minutesAway + "</td></tr>");
 })
